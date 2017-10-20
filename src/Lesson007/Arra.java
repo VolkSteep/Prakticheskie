@@ -26,7 +26,7 @@ class Arra {
             }
         }
         System.out.println("Изачательный массив:\n"+chisla);
-
+        System.out.println("Массив по условию:");
         for (int i = 0; i < 1; i++) {
             chisla.add(0,otr);
             chisla.add(pol);
