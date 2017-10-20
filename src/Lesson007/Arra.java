@@ -12,19 +12,27 @@ class Arra {
         System.out.print("Количество чисел = ");
         n = scn.nextInt();
         for (int i = 0; i < n; i++) {
-            chisla.add((int) (Math.random() * -200 + 100));
+            chisla.add(rnd.nextInt(199 )-99);
+
         }
-        System.out.println("Числа \n" + chisla);
+
 
         for (int i = 0; i < n; i++) {
             if (chisla.get(i) > 0) {
-                pol *= i;
-            } else {
-                otr += i;
+                pol *= chisla.get(i);
             }
-            System.out.println(pol);
-            System.out.println(otr);
+            if(chisla.get(i) < 0) {
+                otr += chisla.get(i);
+            }
         }
+        System.out.println("Изачательный массив:\n"+chisla);
+        System.out.println("Массив по условию:");
+        for (int i = 0; i < 1; i++) {
+            chisla.add(0,otr);
+            chisla.add(pol);
+        }
+        System.out.println(chisla);
     }
+
 }
 
